@@ -9,6 +9,7 @@
   --title-text-color: #000000;
   --accent-color: #18a0fb;
   --primary-white-color: #ffffff;
+  --secondary-bg-color: #f5f5f5;
 }
 body {
   background-color: var(--primary-white-color);
@@ -18,7 +19,17 @@ body {
   line-height: 1.67;
   letter-spacing: -0.015em;
 }
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 1440px;
+  outline: 1px solid tomato;
+}
 .list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 /* Logo */
@@ -56,7 +67,13 @@ body {
 }
 /* hero */
 
+.hero {
+  text-align: center;
+}
+
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 40px;
   color: var(--title-text-color);
   font-weight: 400;
   font-size: 56px;
@@ -66,14 +83,30 @@ body {
 
 /* sectioin */
 
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section.nopadding {
+  padding: 0;
+}
+
 .section-title {
   color: var(--title-text-color);
+  margin-top: 0;
+  margin-bottom: 60px;
   font-weight: 400;
   font-size: 48px;
   line-height: 1.5;
+}
+
+.section-title.centered {
   text-align: center;
 }
 .section-description {
+  margin-top: 0;
+  margin-bottom: 80px;
   font-size: 36px;
   line-height: 1.39;
 }
@@ -81,24 +114,48 @@ body {
 
 .feature-list .title,
 .work-list .title {
+  margin-top: 0;
+  margin-bottom: 24px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 24px;
   line-height: 1.5;
 }
 
+.feature-list p {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
 .feature-list .link {
   color: var(--accent-color);
 }
 
+/* works */
+
+.work-list > .item {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.work-list > .item:nth-child(2n) {
+  background-color: var(--secondary-bg-color);
+}
+
 /* Button */
 .button {
+  border-radius: 6px;
+  padding: 11px 34px;
+  display: inline-block;
+  min-width: 130px;
+  border: 1px solid transparent;
   color: var(--title-text-color);
   background-color: var(--primary-white-color);
   font-weight: 500;
   font-size: 15px;
   line-height: 1.2;
   text-decoration: none;
+  text-align: center;
 }
 
 .button.primary {
@@ -109,4 +166,5 @@ body {
 .button.secondary {
   color: var(--accent-color);
   background-color: var(--primary-white-color);
+  border-color: var(--accent-color);
 }
